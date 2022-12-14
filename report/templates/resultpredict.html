@@ -18,6 +18,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
     <!-- Additional CSS Files -->
@@ -52,8 +53,8 @@
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
               <h4>BRAIN-STROKE <img src="static/images/logo-icon.png" alt=""></h4>
-              
             </a>
+
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
@@ -101,11 +102,29 @@
                 </div>
               </div>
             </div>
+            
+              
+            </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                 <img src="{% static 'images/health_2.svg' %}" alt="" width="800" height="600">
               </div>
-            </div>
+
+              <center>
+                {% for h in history %}
+                  <div class="card-body">
+                    <h1 class="card-title">{{ h.visceral_level }}</h1>
+                    <p>{{h.body_fat}}</p>
+                    <p>{{h.bmi}}</p>
+                    <p>{{h.gender}}</p>
+    
+                  </div> 
+                  {% endfor %} 
+                  <button onclick="location.href='{% url 'export-to-csv' %}'"  class="w3-button w3-green" >Export file</button>
+                </center>
+
+                
+              
           </div>
         </div>
       </div>

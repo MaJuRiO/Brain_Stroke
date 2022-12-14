@@ -22,5 +22,7 @@ urlpatterns = [
     path('index.html', views.index, name='index'),
     path('predicthealth.html', views.predicthealth, name='predicthealth.html'),
     path('resultpredict.html', views.result, name='resultpredict.html'),
+    path('export-to-csv', views.export_to_csv, name='export-to-csv'),
+    path('export-to-csv-one', views.export_to_csv_one, name='export-to-csv-one'),
 
 ]

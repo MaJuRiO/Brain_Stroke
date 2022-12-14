@@ -41,94 +41,99 @@
 <h2><b>INPUT YOUR INFO</b></h2>
 
 <!-- Start Form -->
-<form id="myForm" action="#" method="POST" autocomplete="off">       
+<form id="myForm" action="#" method="POST" autocomplete="off">   
+  {% csrf_token %}    
   <!-- Start Input body fat -->
   <div class="form-group">
-    <label for="BODY FAT PERCENTAGE"><b>BODY FAT PERCENTAGE</b></label>
-    <input type="text" class="form-control" id="BODY FAT PERCENTAGE" name="BODYFAT" placeholder="Enter BODY FAT" required/>
+    <label for="body_fat"><b>BODY FAT PERCENTAGE</b></label>
+    <input type="number" step="0.01"  class="form-control" id="body_fat" name="body_fat" placeholder="Enter BODY FAT" required/>
   </div>
   <!-- End Input body fat -->
 
   <!-- Start Input BASAL METABOLISM -->
   <div class="form-group">
-    <label for="BASAL METABOLISM"><b>BASAL METABOLISM</b></label>
-    <input type="email" class="form-control" id="BASAL METABOLISM" name="BASALMETABOLISM" placeholder="Enter BASAL METABOLISM" required/>
+    <label for="basal_metabolism"><b>BASAL METABOLISM</b></label>
+    <input type="number" step="0.01"  class="form-control" id="basal_metabolism" name="basal_metabolism" placeholder="Enter BASAL METABOLISM" required/>
   </div>
   <!-- End Input BASAL METABOLISM -->
 
   <!-- Start Input SKELETAL MUSCLE PERCENTAGE -->
   <div class="form-group">
-    <label for="SKELETAL MUSCLE PERCENTAGE"><b>SKELETAL MUSCLE PERCENTAGE</b></label>
-    <input type="tel" class="form-control" id="SKELETAL MUSCLE PERCENTAGE" name="SKELETALMUSCLEPERCENTAGE" placeholder="Enter SKELETAL MUSCLE PERCENTAGE" required/>
+    <label for="skeletal_muscle"><b>SKELETAL MUSCLE PERCENTAGE</b></label>
+    <input type="number" step="0.01"  class="form-control" id="skeletal_muscle" name="skeletal_muscle" placeholder="Enter SKELETAL MUSCLE PERCENTAGE" required/>
   </div>
   <!-- End Input SKELETAL MUSCLE PERCENTAGE -->
   
   <!-- Start Input WEIGHT -->
   <div class="form-group">
-    <label for="WEIGHT"><b>WEIGHT</b></label>
-    <input type="tel" class="form-control" id="WEIGHT" name="WEIGHT" placeholder="Enter WEIGHT" required/>
+    <label for="weight"><b>WEIGHT</b></label>
+    <input type="number" step="0.01"  class="form-control" id="weight" name="weight" placeholder="Enter WEIGHT" required/>
   </div>
   <!-- End Input WEIGHT -->
 
   <!-- Start Input BMI -->
   <div class="form-group">
-    <label for="BMI"><b>BMI</b></label>
-    <input type="tel" class="form-control" id="BMI" name="BMI" placeholder="Enter BMI" required/>
+    <label for="bmi"><b>BMI</b></label>
+    <input type="number" step="0.01"  class="form-control" id="bmi" name="bmi" placeholder="Enter BMI" required/>
   </div>
   <!-- End Input BMI -->
   <!-- Start Input AGE -->
   <div class="form-group">
-    <label for="AGE"><b>AGE</b></label>
-    <input type="tel" class="form-control" id="AGE" name="AGE" placeholder="Enter AGE" required/>
+    <label for="age"><b>AGE</b></label>
+    <input type="number"  class="form-control" id="age" name="age" placeholder="Enter AGE" required/>
   </div>
   <!-- End Input AGE -->
   <!-- Start Input GENDER -->
   <div class="form-group">
-    <label for="GENDER"><b>GENDER</b></label>
-    <input type="tel" class="form-control" id="GENDER" name="GENDER" placeholder="Enter GENDER" required/>
+    <label for="gender"><b>GENDER</b></label>
+    <input type="text" class="form-control" id="gender" name="gender" placeholder="Enter your GENDER" required/>
   </div>
 
 <!-- Start Input QUANTITY OF ACTIVITY -->
 <div class="form-group">
-  <label for="quantity of activity"><b>QUANTITY OF ACTIVITY</b></label>
-  <input type="tel" class="form-control" id="QUANTITY OF ACTIVITY" name="QUANTITY OF ACTIVITY" placeholder="Enter QUANTITY OF ACTIVITY" required/>
+  <label for="quantity_activity"><b>QUANTITY OF ACTIVITY</b></label>
+  <input type="number"  class="form-control" id="quantity_activity" name="quantity_activity" placeholder="Enter QUANTITY OF ACTIVITY" required/>
 </div>
 <!-- End Input QUANTITY OF ACTIVITY -->
 
 <!-- Start Input DIET -->
 <div class="form-group">
-  <label for="DIET"><b>DIET</b></label>
-  <input type="tel" class="form-control" id="DIET" name="DIET" placeholder="Enter DIET(prefers fat and sugar)" required/>
+  <label for="diet"><b>DIET</b></label>
+  <input type="text" class="form-control" id="diet" name="diet" placeholder="Enter DIET(prefers fat and sugar)" required/>
 </div>
 <!-- End Input DIET -->
 
-<!-- Start Input Diabetes -->
-<div class="form-group">
-  <label for="DIABETES"><b>DIABETES</b></label>
-  <input type="tel" class="form-control" id="DIABETES" name="DIABETES" placeholder="Enter DIABETES" required/>
-</div>
-<!-- End Input Diabetes -->
-
 <!-- Start Input High blood pressure -->
 <div class="form-group">
-  <label for="HIGHBLOODPRESSURE"><b>HIGH BLOOD PRESSURE</b></label>
-  <input type="tel" class="form-control" id="HIGHBLOODPRESSURE" name="HIGHBLOODPRESSURE" placeholder="Enter HIGH BLOOD PRESSURE" required/>
+  <label for="high_blood"><b>HIGH BLOOD PRESSURE</b></label>
+  <input type="number" class="form-control" id="high_blood" name="high_blood" placeholder="Enter HIGH BLOOD PRESSURE" required/>
 </div>
 <!-- End Input High blood pressure -->
 
-<!-- Start Input Myocardial infarction -->
+<!-- Start Input Diabetes -->
 <div class="form-group">
-  <label for="MYOCARDIAL INFARCTION"><b>MYOCARDIAL INFARCTION</b></label>
-  <input type="tel" class="form-control" id="MYOCARDIAL INFARCTION" name="MYOCARDIAL INFARCTION" placeholder="Enter MYOCARDIAL INFARCTION" required/>
+  <label for="diabetes">DIABETES:</label>
+  <select id="diabetes" name="diabetes">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
 </div>
-<!-- End Input Myocardial infarction -->
+<!-- End Input Diabetes -->
+
+
+
 
 <div class="form-group">
-  <label for="DRINK"><b>DRINK</b></label>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><input type="checkbox" class="form-check-input" value="drink" name="drinking" id="drink">yes&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;<input type="checkbox" class="form-check-input" value="drink" name="drinking" id="drink">no
+  <label for="drink" >DRINK:</label>
+<select id="drink" name="drink" required>
+  <option value="yes">Yes</option>
+  <option value="no">No</option>
+</select>
 </div>
-<a href="resultpredict.html" class="Admin"><img src="https://cdn-icons-png.flaticon.com/512/5632/5632356.png" height="100px" width="150px"></a>
+<button type="submit">
+  <a href="resultpredict.html" class="Admin"  ><img src="https://cdn-icons-png.flaticon.com/512/5632/5632356.png" height="100px" width="150px"></a>
+</button>
+
 
 
 <form id="myForm" action="#" method="POST" autocomplete="off">
