@@ -18,3 +18,6 @@ import re
 def index(request):
     data = {}
     return render(request, 'index.html', data)
+def predicthealth(request):
+    data = {}
+    return render(request, 'predicthealth.html', data)

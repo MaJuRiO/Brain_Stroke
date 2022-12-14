@@ -19,5 +19,6 @@ from report import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('predicthealth.html', views.predicthealth, name='predicthealth.html'),
 
 ]
