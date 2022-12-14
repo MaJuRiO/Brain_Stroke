@@ -21,3 +21,6 @@ def index(request):
 def predicthealth(request):
     data = {}
     return render(request, 'predicthealth.html', data)
+def result(request):
+    data = {}
+    return render(request, 'resultpredict.html', data)

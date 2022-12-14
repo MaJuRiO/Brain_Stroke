@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,18 +11,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <title>SEO Dream - Creative SEO HTML5 Template by TemplateMo</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-seo-dream.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/templatemo-seo-dream.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animated.css' %}"
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.css' %}">
 
 </head>
 
@@ -49,15 +51,11 @@
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <h4>MAJU&FRIENDS <img src="assets/images/logo-icon.png" alt=""></h4>
+              <h4>BRAIN-STROKE <img src="static/images/logo-icon.png" alt=""></h4>
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#">Predict your health</a></li>
-              <li class="scroll-to-section"><div class="main-blue-button"><a href="#top">Back</a></div></li> 
-            </ul>        
+              
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
@@ -95,20 +93,14 @@
                       <h4></h4>
                     </div>
                   </div>
-                  <div class="col-lg-12">
-                    <h2>WELCOME TO OUR WEBSITE</h2>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="main-green-button scroll-to-section">
-                      <a href="#features">SEE MORE!</a>
-                    </div>
+                  
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/health 2.svg" alt="" width="800" height="600">
+                <img src="{% static 'images/health_2.svg' %}" alt="" width="800" height="600">
               </div>
             </div>
           </div>
@@ -117,27 +109,14 @@
     </div>
   </div>
 
-
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>WE'LL GET A THIS SUB TOGETHER. 
-          
-          <br>Web Designed by MAJU AND FRIENDS TEAM</a></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  
   <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="{% static 'jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+  <script src="{% static 'js/owl-carousel.js' %}"></script>
+  <script src="{% static 'js/animation.js' %}"></script>
+  <script src="{% static 'js/imagesloaded.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
 
 </body>
 </html>
